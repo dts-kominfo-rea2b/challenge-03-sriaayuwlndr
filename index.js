@@ -32,7 +32,7 @@ const listBelanjaan = (dataBelanjaan) =>
       nama[i] = dataBelanjaan[i]['nama'];
       kuantitas[i] = dataBelanjaan[i]['kuantitas'];
       
-      hasilPertama[i] = " - "+nama[i]+" x "+kuantitas[i];
+      hasilPertama[i] = "- "+nama[i]+" x "+kuantitas[i];
       
   }
 
