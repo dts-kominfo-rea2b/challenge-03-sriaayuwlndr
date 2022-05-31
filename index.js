@@ -20,8 +20,9 @@ const dataBelanjaan = [
   },
 ];
 
+
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
-const listBelanjaan = (dataBelanjaan) => 
+const listBelanjaan = (data) => 
 {
   let nama = [];
   let kuantitas = [];
@@ -29,18 +30,17 @@ const listBelanjaan = (dataBelanjaan) =>
 
   for (let i = 0; i < 3; i++)
   {
-      nama[i] = dataBelanjaan[i]['nama'];
-      kuantitas[i] = dataBelanjaan[i]['kuantitas'];
+      nama[i] = data[i]['nama'];
+      kuantitas[i] = data[i]['kuantitas'];
       
       hasilPertama[i] = "- "+nama[i]+" x "+kuantitas[i];
-      
   }
 
   return hasilPertama;
 }
 
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
-const totalBelanjaan = (dataBelanjaan) => 
+const totalBelanjaan = (data) => 
 {
     let total = 0;
     let harga = [];
@@ -50,8 +50,8 @@ const totalBelanjaan = (dataBelanjaan) =>
 
     for (let i = 0; i < 3; i++)
     {
-        harga[i] = dataBelanjaan[i]['harga'];
-        kuantitas[i] = dataBelanjaan[i]['kuantitas'];
+        harga[i] = data[i]['harga'];
+        kuantitas[i] = data[i]['kuantitas'];
 
         nominal[i] = harga[i]*kuantitas[i];
 
