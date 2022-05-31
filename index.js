@@ -20,17 +20,15 @@ const dataBelanjaan = [
   },
 ];
 
-
-
-
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
 const listBelanjaan = (data) => 
 {
   let nama = [];
   let kuantitas = [];
   let hasilPertama = [];
+  let panjangData = data.length;
 
-  for (let i = 0; i < 3; i++)
+  for (let i = 0; i < panjangData; i++)
   {
       nama[i] = data[i]['nama'];
       kuantitas[i] = data[i]['kuantitas'];
@@ -49,8 +47,9 @@ const totalBelanjaan = (data) =>
     let kuantitas = [];
     let nominal = [];
     let hasilKedua = 0;
+    let panjangData = data.length;
 
-    for (let i = 0; i < 3; i++)
+    for (let i = 0; i < panjangData; i++)
     {
         harga[i] = data[i]['harga'];
         kuantitas[i] = data[i]['kuantitas'];
@@ -71,9 +70,9 @@ const main = () => {
   console.log("Selamat datang customer");
 
   console.log("Belanjaan Anda adalah:");
-  console.log(listBelanjaan?.(dataBelanjaan || mockBelanjaan)?.join("\n"));
+  console.log(listBelanjaan?.(dataBelanjaan)?.join("\n"));
   console.log(
-    "\nTotal Belanjaan Anda adalah Rp. " + totalBelanjaan?.(dataBelanjaan || mockBelanjaan)
+    "\nTotal Belanjaan Anda adalah Rp. " + totalBelanjaan?.(dataBelanjaan)
   );
 };
 
