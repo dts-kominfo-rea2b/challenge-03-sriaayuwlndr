@@ -20,6 +20,29 @@ const dataBelanjaan = [
   },
 ];
 
+const mockBelanjaan = [
+  {
+    nama: "Buku",
+    harga: 10000,
+    kuantitas: 2,
+  },
+  {
+    nama: "Bimoli",
+    harga: 49000,
+    kuantitas: 1,
+  },
+  {
+    nama: "Notepad",
+    harga: 100000,
+    kuantitas: 3,
+  },
+  {
+    nama: "Mystery Box",
+    harga: 5000,
+    kuantitas: 4,
+  },
+];
+
 
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
 const listBelanjaan = (data) => 
@@ -72,6 +95,14 @@ const main = () => {
   console.log(listBelanjaan?.(dataBelanjaan)?.join("\n"));
   console.log(
     "\nTotal Belanjaan Anda adalah Rp. " + totalBelanjaan?.(dataBelanjaan)
+  );
+
+  console.log("Selamat datang customer");
+
+  console.log("Belanjaan Anda adalah:");
+  console.log(listBelanjaan?.(mockBelanjaan)?.join("\n"));
+  console.log(
+    "\nTotal Belanjaan Anda adalah Rp. " + totalBelanjaan?.(mockBelanjaan)
   );
 };
 
